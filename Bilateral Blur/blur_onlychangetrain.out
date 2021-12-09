@@ -1,0 +1,222 @@
+Unloading the anaconda2 module (if loaded)...
+Loaded dependency: anaconda3/2020.11
+AI/Version: anaconda3.2020.11
+-----------------------------
+
+Description
+-----------
+The modulefile AI/anaconda3.2020.11 provides a unified, rich, anaconda3 based
+environment for Artificial Intelligence(AI)/Machine Learning(ML)/Big Data(BD)
+on top of based on Python 3.
+
+Module contents
+---------------
+Several popular AI/ML/BD packages are included in this environment, such as:
+    tensorflow-gpu, theano, keras-gpu, pytorch, opencv, pandas, scikit-learn,
+scikit-image etc.
+
+To check the full list of available packages in this environment, first
+activate it and then run the command
+    conda list
+
+Main packages included in this module:
+* astropy 4.2
+* blas 1.0
+* bokeh 2.2.3
+* cudatoolkit 10.0.130
+* cudnn 7.6.5
+* h5py 2.8.0
+* hdf5 1.10.2
+* ipython 7.19.0
+* jupyter 1.0.0
+* jupyterlab 2.2.6
+* keras-gpu 2.3.1
+* matplotlib 3.3.2
+* mkl 2019.4
+* nccl 1.3.5
+* networkx 2.5
+* ninja 1.10.2
+* nltk 3.5
+* notebook 6.1.6
+* numba 0.51.2
+* numpy 1.17.0
+* opencv 3.4.2
+* pandas 1.2.0
+* pillow 8.1.0
+* pip 20.3.3
+* python 3.8.5
+* pytorch 1.5.0
+* scikit-learn 0.23.2
+* scipy 1.5.2
+* seaborn 0.11.1
+* tensorboard 1.15.0
+* tensorflow-gpu 1.15.0
+* theano 1.0.4
+
+If you need to further customize this environment (e.g., install additional
+packages, or upgrade a particular package),
+you should first clone this environment as follows:
+    conda create --prefix <path to a dir in which you can write> --clone
+$AI_ENV
+Then activate the newly spawned environment and proceed with your
+customization.
+
+To get further help with conda usage, you can try one of the following:
+    conda -h
+    conda <command> -h
+
+Activate the module
+-------------------
+Before activating, make sure you are on a GPU node of Bridges2 if you wish to
+use the components built to run on GPUs.
+To activate the environment, run the following commands:
+    # module load AI/anaconda3.2020.11
+    source activate $AI_ENV
+        # OR
+    conda activate $AI_ENV # This might require you to run "conda init" first.
+
+2021-11-30 17:54:16.556465: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2021-11-30 17:54:16.556691: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-11-30 17:55:24.657807: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2021-11-30 17:55:24.658211: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcublas.so.11'; dlerror: libcublas.so.11: cannot open shared object file: No such file or directory
+2021-11-30 17:55:24.658435: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcublasLt.so.11'; dlerror: libcublasLt.so.11: cannot open shared object file: No such file or directory
+2021-11-30 17:55:24.658645: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcufft.so.10'; dlerror: libcufft.so.10: cannot open shared object file: No such file or directory
+2021-11-30 17:55:24.659518: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcurand.so.10'; dlerror: libcurand.so.10: cannot open shared object file: No such file or directory
+2021-11-30 17:55:24.659728: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcusolver.so.11'; dlerror: libcusolver.so.11: cannot open shared object file: No such file or directory
+2021-11-30 17:55:24.659929: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcusparse.so.11'; dlerror: libcusparse.so.11: cannot open shared object file: No such file or directory
+2021-11-30 17:55:24.660243: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudnn.so.8'; dlerror: libcudnn.so.8: cannot open shared object file: No such file or directory
+2021-11-30 17:55:24.672469: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1850] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+2021-11-30 17:55:24.721880: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2021-11-30 18:04:03.432389: W tensorflow/core/framework/cpu_allocator_impl.cc:82] Allocation of 28991029248 exceeds 10% of free system memory.
+BLUR only change inputs
+tfds.core.DatasetInfo(
+    name='patch_camelyon',
+    full_name='patch_camelyon/2.0.0',
+    description="""
+    The PatchCamelyon benchmark is a new and challenging image classification
+    dataset. It consists of 327.680 color images (96 x 96px) extracted from
+    histopathologic scans of lymph node sections. Each image is annoted with a
+    binary label indicating presence of metastatic tissue. PCam provides a new
+    benchmark for machine learning models: bigger than CIFAR10, smaller than
+    Imagenet, trainable on a single GPU.
+    """,
+    homepage='https://patchcamelyon.grand-challenge.org/',
+    data_path='./tensorflow_datasets/patch_camelyon/2.0.0',
+    download_size=7.48 GiB,
+    dataset_size=7.06 GiB,
+    features=FeaturesDict({
+        'id': Text(shape=(), dtype=tf.string),
+        'image': Image(shape=(96, 96, 3), dtype=tf.uint8),
+        'label': ClassLabel(shape=(), dtype=tf.int64, num_classes=2),
+    }),
+    supervised_keys=('image', 'label'),
+    disable_shuffling=False,
+    splits={
+        'test': <SplitInfo num_examples=32768, num_shards=8>,
+        'train': <SplitInfo num_examples=262144, num_shards=64>,
+        'validation': <SplitInfo num_examples=32768, num_shards=8>,
+    },
+    citation="""@misc{b_s_veeling_j_linmans_j_winkens_t_cohen_2018_2546921,
+      author       = {B. S. Veeling, J. Linmans, J. Winkens, T. Cohen, M. Welling},
+      title        = {Rotation Equivariant CNNs for Digital Pathology},
+      month        = sep,
+      year         = 2018,
+      doi          = {10.1007/978-3-030-00934-2_24},
+      url          = {https://doi.org/10.1007/978-3-030-00934-2_24}
+    }""",
+)
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 96, 96, 3)]       0         
+                                                                 
+ conv2d (Conv2D)             (None, 94, 94, 16)        448       
+                                                                 
+ conv2d_1 (Conv2D)           (None, 92, 92, 16)        2320      
+                                                                 
+ max_pooling2d (MaxPooling2D  (None, 46, 46, 16)       0         
+ )                                                               
+                                                                 
+ conv2d_2 (Conv2D)           (None, 44, 44, 32)        4640      
+                                                                 
+ conv2d_3 (Conv2D)           (None, 42, 42, 32)        9248      
+                                                                 
+ max_pooling2d_1 (MaxPooling  (None, 21, 21, 32)       0         
+ 2D)                                                             
+                                                                 
+ conv2d_4 (Conv2D)           (None, 19, 19, 64)        18496     
+                                                                 
+ conv2d_5 (Conv2D)           (None, 17, 17, 64)        36928     
+                                                                 
+ max_pooling2d_2 (MaxPooling  (None, 8, 8, 64)         0         
+ 2D)                                                             
+                                                                 
+ flatten (Flatten)           (None, 4096)              0         
+                                                                 
+ dense (Dense)               (None, 256)               1048832   
+                                                                 
+ dropout (Dropout)           (None, 256)               0         
+                                                                 
+ dense_1 (Dense)             (None, 128)               32896     
+                                                                 
+ dropout_1 (Dropout)         (None, 128)               0         
+                                                                 
+ dense_2 (Dense)             (None, 2)                 258       
+                                                                 
+=================================================================
+Total params: 1,154,066
+Trainable params: 1,154,066
+Non-trainable params: 0
+_________________________________________________________________
+generate training material...
+generate validation material...
+2021-11-30 18:04:14.268072: W tensorflow/core/framework/cpu_allocator_impl.cc:82] Allocation of 28991029248 exceeds 10% of free system memory.
+begining training...
+Epoch 1/10
+2048/2048 - 445s - loss: 0.5270 - accuracy: 0.7478 - val_loss: 1.3258 - val_accuracy: 0.5005 - 445s/epoch - 217ms/step
+Epoch 2/10
+2048/2048 - 441s - loss: 0.4293 - accuracy: 0.8152 - val_loss: 0.9313 - val_accuracy: 0.5005 - 441s/epoch - 215ms/step
+Epoch 3/10
+2048/2048 - 452s - loss: 0.3962 - accuracy: 0.8322 - val_loss: 0.8381 - val_accuracy: 0.5005 - 452s/epoch - 221ms/step
+Epoch 4/10
+2048/2048 - 437s - loss: 0.3687 - accuracy: 0.8465 - val_loss: 0.8005 - val_accuracy: 0.5005 - 437s/epoch - 213ms/step
+Epoch 5/10
+2048/2048 - 438s - loss: 0.3601 - accuracy: 0.8520 - val_loss: 0.8281 - val_accuracy: 0.5005 - 438s/epoch - 214ms/step
+Epoch 6/10
+2048/2048 - 443s - loss: 0.3426 - accuracy: 0.8613 - val_loss: 0.8265 - val_accuracy: 0.5005 - 443s/epoch - 216ms/step
+Epoch 7/10
+2048/2048 - 440s - loss: 0.3431 - accuracy: 0.8604 - val_loss: 0.8278 - val_accuracy: 0.5005 - 440s/epoch - 215ms/step
+Epoch 8/10
+2048/2048 - 425s - loss: 0.3355 - accuracy: 0.8647 - val_loss: 0.8031 - val_accuracy: 0.5005 - 425s/epoch - 207ms/step
+Epoch 9/10
+2048/2048 - 432s - loss: 0.3375 - accuracy: 0.8657 - val_loss: 0.7832 - val_accuracy: 0.5005 - 432s/epoch - 211ms/step
+Epoch 10/10
+2048/2048 - 424s - loss: 0.3282 - accuracy: 0.8680 - val_loss: 0.8995 - val_accuracy: 0.5005 - 424s/epoch - 207ms/step
+2021-11-30 19:17:43.454811: W tensorflow/core/framework/cpu_allocator_impl.cc:82] Allocation of 28991029248 exceeds 10% of free system memory.
+generate test material...
+Epoch 1/10
+2048/2048 - 410s - loss: 0.3344 - accuracy: 0.8662 - val_loss: 0.8013 - val_accuracy: 0.5005 - 410s/epoch - 200ms/step
+Epoch 2/10
+2048/2048 - 412s - loss: 0.3241 - accuracy: 0.8716 - val_loss: 0.7499 - val_accuracy: 0.5005 - 412s/epoch - 201ms/step
+Epoch 3/10
+2048/2048 - 418s - loss: 0.3323 - accuracy: 0.8687 - val_loss: 0.7578 - val_accuracy: 0.5005 - 418s/epoch - 204ms/step
+Epoch 4/10
+2048/2048 - 416s - loss: 0.3282 - accuracy: 0.8709 - val_loss: 0.7452 - val_accuracy: 0.5005 - 416s/epoch - 203ms/step
+Epoch 5/10
+2048/2048 - 413s - loss: 0.3300 - accuracy: 0.8696 - val_loss: 0.7681 - val_accuracy: 0.5005 - 413s/epoch - 202ms/step
+Epoch 6/10
+2048/2048 - 409s - loss: 0.3287 - accuracy: 0.8707 - val_loss: 0.7513 - val_accuracy: 0.5005 - 409s/epoch - 200ms/step
+Epoch 7/10
+2048/2048 - 412s - loss: 0.3396 - accuracy: 0.8679 - val_loss: 0.7710 - val_accuracy: 0.5005 - 412s/epoch - 201ms/step
+Epoch 8/10
+2048/2048 - 413s - loss: 0.3350 - accuracy: 0.8692 - val_loss: 0.7626 - val_accuracy: 0.5005 - 413s/epoch - 202ms/step
+Epoch 9/10
+2048/2048 - 395s - loss: 0.3371 - accuracy: 0.8679 - val_loss: 0.7672 - val_accuracy: 0.5005 - 395s/epoch - 193ms/step
+Epoch 10/10
+2048/2048 - 396s - loss: 0.3385 - accuracy: 0.8665 - val_loss: 0.7228 - val_accuracy: 0.5005 - 396s/epoch - 193ms/step
+/ocean/projects/cis210064p/mezhao/cs153xsede/env/lib/python3.7/site-packages/keras/optimizer_v2/gradient_descent.py:102: UserWarning: The `lr` argument is deprecated, use `learning_rate` instead.
+  super(SGD, self).__init__(name, **kwargs)
+Test set accuracy is 0.5012

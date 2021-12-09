@@ -1,0 +1,157 @@
+Unloading the anaconda2 module (if loaded)...
+Loaded dependency: anaconda3/2020.11
+AI/Version: anaconda3.2020.11
+-----------------------------
+
+Description
+-----------
+The modulefile AI/anaconda3.2020.11 provides a unified, rich, anaconda3 based
+environment for Artificial Intelligence(AI)/Machine Learning(ML)/Big Data(BD)
+on top of based on Python 3.
+
+Module contents
+---------------
+Several popular AI/ML/BD packages are included in this environment, such as:
+    tensorflow-gpu, theano, keras-gpu, pytorch, opencv, pandas, scikit-learn,
+scikit-image etc.
+
+To check the full list of available packages in this environment, first
+activate it and then run the command
+    conda list
+
+Main packages included in this module:
+* astropy 4.2
+* blas 1.0
+* bokeh 2.2.3
+* cudatoolkit 10.0.130
+* cudnn 7.6.5
+* h5py 2.8.0
+* hdf5 1.10.2
+* ipython 7.19.0
+* jupyter 1.0.0
+* jupyterlab 2.2.6
+* keras-gpu 2.3.1
+* matplotlib 3.3.2
+* mkl 2019.4
+* nccl 1.3.5
+* networkx 2.5
+* ninja 1.10.2
+* nltk 3.5
+* notebook 6.1.6
+* numba 0.51.2
+* numpy 1.17.0
+* opencv 3.4.2
+* pandas 1.2.0
+* pillow 8.1.0
+* pip 20.3.3
+* python 3.8.5
+* pytorch 1.5.0
+* scikit-learn 0.23.2
+* scipy 1.5.2
+* seaborn 0.11.1
+* tensorboard 1.15.0
+* tensorflow-gpu 1.15.0
+* theano 1.0.4
+
+If you need to further customize this environment (e.g., install additional
+packages, or upgrade a particular package),
+you should first clone this environment as follows:
+    conda create --prefix <path to a dir in which you can write> --clone
+$AI_ENV
+Then activate the newly spawned environment and proceed with your
+customization.
+
+To get further help with conda usage, you can try one of the following:
+    conda -h
+    conda <command> -h
+
+Activate the module
+-------------------
+Before activating, make sure you are on a GPU node of Bridges2 if you wish to
+use the components built to run on GPUs.
+To activate the environment, run the following commands:
+    # module load AI/anaconda3.2020.11
+    source activate $AI_ENV
+        # OR
+    conda activate $AI_ENV # This might require you to run "conda init" first.
+
+2021-11-29 01:48:17.261785: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2021-11-29 01:48:17.261963: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-11-29 01:49:08.654188: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2021-11-29 01:49:08.654575: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcublas.so.11'; dlerror: libcublas.so.11: cannot open shared object file: No such file or directory
+2021-11-29 01:49:08.654802: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcublasLt.so.11'; dlerror: libcublasLt.so.11: cannot open shared object file: No such file or directory
+2021-11-29 01:49:08.654990: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcufft.so.10'; dlerror: libcufft.so.10: cannot open shared object file: No such file or directory
+2021-11-29 01:49:08.656131: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcurand.so.10'; dlerror: libcurand.so.10: cannot open shared object file: No such file or directory
+2021-11-29 01:49:08.656396: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcusolver.so.11'; dlerror: libcusolver.so.11: cannot open shared object file: No such file or directory
+2021-11-29 01:49:08.656579: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcusparse.so.11'; dlerror: libcusparse.so.11: cannot open shared object file: No such file or directory
+2021-11-29 01:49:08.656749: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudnn.so.8'; dlerror: libcudnn.so.8: cannot open shared object file: No such file or directory
+2021-11-29 01:49:08.674333: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1850] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+2021-11-29 01:49:08.734371: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 96, 96, 3)]       0         
+                                                                 
+ conv2d (Conv2D)             (None, 94, 94, 16)        448       
+                                                                 
+ conv2d_1 (Conv2D)           (None, 92, 92, 16)        2320      
+                                                                 
+ max_pooling2d (MaxPooling2D  (None, 46, 46, 16)       0         
+ )                                                               
+                                                                 
+ conv2d_2 (Conv2D)           (None, 44, 44, 32)        4640      
+                                                                 
+ conv2d_3 (Conv2D)           (None, 42, 42, 32)        9248      
+                                                                 
+ max_pooling2d_1 (MaxPooling  (None, 21, 21, 32)       0         
+ 2D)                                                             
+                                                                 
+ conv2d_4 (Conv2D)           (None, 19, 19, 64)        18496     
+                                                                 
+ conv2d_5 (Conv2D)           (None, 17, 17, 64)        36928     
+                                                                 
+ max_pooling2d_2 (MaxPooling  (None, 8, 8, 64)         0         
+ 2D)                                                             
+                                                                 
+ flatten (Flatten)           (None, 4096)              0         
+                                                                 
+ dense (Dense)               (None, 256)               1048832   
+                                                                 
+ dropout (Dropout)           (None, 256)               0         
+                                                                 
+ dense_1 (Dense)             (None, 128)               32896     
+                                                                 
+ dropout_1 (Dropout)         (None, 128)               0         
+                                                                 
+ dense_2 (Dense)             (None, 2)                 258       
+                                                                 
+=================================================================
+Total params: 1,154,066
+Trainable params: 1,154,066
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/10
+2048/2048 - 364s - loss: 0.4727 - accuracy: 0.7778 - val_loss: 0.4420 - val_accuracy: 0.7748 - 364s/epoch - 178ms/step
+Epoch 2/10
+2048/2048 - 358s - loss: 0.3580 - accuracy: 0.8458 - val_loss: 0.4028 - val_accuracy: 0.8196 - 358s/epoch - 175ms/step
+Epoch 3/10
+2048/2048 - 406s - loss: 0.3160 - accuracy: 0.8674 - val_loss: 0.4447 - val_accuracy: 0.8070 - 406s/epoch - 198ms/step
+Epoch 4/10
+2048/2048 - 357s - loss: 0.2827 - accuracy: 0.8853 - val_loss: 0.3812 - val_accuracy: 0.8291 - 357s/epoch - 174ms/step
+Epoch 5/10
+2048/2048 - 358s - loss: 0.2616 - accuracy: 0.8944 - val_loss: 0.3639 - val_accuracy: 0.8399 - 358s/epoch - 175ms/step
+Epoch 6/10
+2048/2048 - 353s - loss: 0.2354 - accuracy: 0.9066 - val_loss: 0.3764 - val_accuracy: 0.8372 - 353s/epoch - 172ms/step
+Epoch 7/10
+2048/2048 - 379s - loss: 0.2244 - accuracy: 0.9120 - val_loss: 0.3404 - val_accuracy: 0.8508 - 379s/epoch - 185ms/step
+Epoch 8/10
+2048/2048 - 455s - loss: 0.2075 - accuracy: 0.9197 - val_loss: 0.4193 - val_accuracy: 0.8365 - 455s/epoch - 222ms/step
+Epoch 9/10
+2048/2048 - 410s - loss: 0.2013 - accuracy: 0.9216 - val_loss: 0.3792 - val_accuracy: 0.8357 - 410s/epoch - 200ms/step
+Epoch 10/10
+2048/2048 - 408s - loss: 0.1891 - accuracy: 0.9274 - val_loss: 0.4009 - val_accuracy: 0.8441 - 408s/epoch - 199ms/step
+Test set accuracy is 0.8259
+2021-11-29 02:53:30.389082: W tensorflow/python/util/util.cc:368] Sets are not currently considered sequences, but this may change in the future, so consider avoiding using them.

@@ -1,0 +1,168 @@
+Unloading the anaconda2 module (if loaded)...
+Loaded dependency: anaconda3/2020.11
+AI/Version: anaconda3.2020.11
+-----------------------------
+
+Description
+-----------
+The modulefile AI/anaconda3.2020.11 provides a unified, rich, anaconda3 based
+environment for Artificial Intelligence(AI)/Machine Learning(ML)/Big Data(BD)
+on top of based on Python 3.
+
+Module contents
+---------------
+Several popular AI/ML/BD packages are included in this environment, such as:
+    tensorflow-gpu, theano, keras-gpu, pytorch, opencv, pandas, scikit-learn,
+scikit-image etc.
+
+To check the full list of available packages in this environment, first
+activate it and then run the command
+    conda list
+
+Main packages included in this module:
+* astropy 4.2
+* blas 1.0
+* bokeh 2.2.3
+* cudatoolkit 10.0.130
+* cudnn 7.6.5
+* h5py 2.8.0
+* hdf5 1.10.2
+* ipython 7.19.0
+* jupyter 1.0.0
+* jupyterlab 2.2.6
+* keras-gpu 2.3.1
+* matplotlib 3.3.2
+* mkl 2019.4
+* nccl 1.3.5
+* networkx 2.5
+* ninja 1.10.2
+* nltk 3.5
+* notebook 6.1.6
+* numba 0.51.2
+* numpy 1.17.0
+* opencv 3.4.2
+* pandas 1.2.0
+* pillow 8.1.0
+* pip 20.3.3
+* python 3.8.5
+* pytorch 1.5.0
+* scikit-learn 0.23.2
+* scipy 1.5.2
+* seaborn 0.11.1
+* tensorboard 1.15.0
+* tensorflow-gpu 1.15.0
+* theano 1.0.4
+
+If you need to further customize this environment (e.g., install additional
+packages, or upgrade a particular package),
+you should first clone this environment as follows:
+    conda create --prefix <path to a dir in which you can write> --clone
+$AI_ENV
+Then activate the newly spawned environment and proceed with your
+customization.
+
+To get further help with conda usage, you can try one of the following:
+    conda -h
+    conda <command> -h
+
+Activate the module
+-------------------
+Before activating, make sure you are on a GPU node of Bridges2 if you wish to
+use the components built to run on GPUs.
+To activate the environment, run the following commands:
+    # module load AI/anaconda3.2020.11
+    source activate $AI_ENV
+        # OR
+    conda activate $AI_ENV # This might require you to run "conda init" first.
+
+2021-12-01 22:58:16.717283: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2021-12-01 22:58:16.717483: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-12-01 22:59:33.036615: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2021-12-01 22:59:33.053046: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcublas.so.11'; dlerror: libcublas.so.11: cannot open shared object file: No such file or directory
+2021-12-01 22:59:33.053865: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcublasLt.so.11'; dlerror: libcublasLt.so.11: cannot open shared object file: No such file or directory
+2021-12-01 22:59:33.054618: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcufft.so.10'; dlerror: libcufft.so.10: cannot open shared object file: No such file or directory
+2021-12-01 22:59:33.055279: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcurand.so.10'; dlerror: libcurand.so.10: cannot open shared object file: No such file or directory
+2021-12-01 22:59:33.055902: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcusolver.so.11'; dlerror: libcusolver.so.11: cannot open shared object file: No such file or directory
+2021-12-01 22:59:33.056313: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcusparse.so.11'; dlerror: libcusparse.so.11: cannot open shared object file: No such file or directory
+2021-12-01 22:59:33.090961: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudnn.so.8'; dlerror: libcudnn.so.8: cannot open shared object file: No such file or directory
+2021-12-01 22:59:33.113914: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1850] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+2021-12-01 22:59:33.547928: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+random_rotate...
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 96, 96, 3)]       0         
+                                                                 
+ sequential (Sequential)     (None, 96, 96, 3)         0         
+                                                                 
+ conv2d (Conv2D)             (None, 94, 94, 16)        448       
+                                                                 
+ conv2d_1 (Conv2D)           (None, 92, 92, 16)        2320      
+                                                                 
+ max_pooling2d (MaxPooling2D  (None, 46, 46, 16)       0         
+ )                                                               
+                                                                 
+ conv2d_2 (Conv2D)           (None, 44, 44, 32)        4640      
+                                                                 
+ conv2d_3 (Conv2D)           (None, 42, 42, 32)        9248      
+                                                                 
+ max_pooling2d_1 (MaxPooling  (None, 21, 21, 32)       0         
+ 2D)                                                             
+                                                                 
+ conv2d_4 (Conv2D)           (None, 19, 19, 64)        18496     
+                                                                 
+ conv2d_5 (Conv2D)           (None, 17, 17, 64)        36928     
+                                                                 
+ max_pooling2d_2 (MaxPooling  (None, 8, 8, 64)         0         
+ 2D)                                                             
+                                                                 
+ flatten (Flatten)           (None, 4096)              0         
+                                                                 
+ dense (Dense)               (None, 256)               1048832   
+                                                                 
+ dropout (Dropout)           (None, 256)               0         
+                                                                 
+ dense_1 (Dense)             (None, 128)               32896     
+                                                                 
+ dropout_1 (Dropout)         (None, 128)               0         
+                                                                 
+ dense_2 (Dense)             (None, 2)                 258       
+                                                                 
+=================================================================
+Total params: 1,154,066
+Trainable params: 1,154,066
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/10
+2048/2048 - 703s - loss: 0.4905 - accuracy: 0.7641 - val_loss: 0.4572 - val_accuracy: 0.8027 - 703s/epoch - 343ms/step
+Epoch 2/10
+2048/2048 - 831s - loss: 0.3769 - accuracy: 0.8354 - val_loss: 0.4284 - val_accuracy: 0.8175 - 831s/epoch - 406ms/step
+Epoch 3/10
+2048/2048 - 534s - loss: 0.3314 - accuracy: 0.8579 - val_loss: 0.4511 - val_accuracy: 0.7979 - 534s/epoch - 261ms/step
+Epoch 4/10
+2048/2048 - 534s - loss: 0.2993 - accuracy: 0.8744 - val_loss: 0.4093 - val_accuracy: 0.8243 - 534s/epoch - 261ms/step
+Epoch 5/10
+2048/2048 - 833s - loss: 0.2844 - accuracy: 0.8819 - val_loss: 0.4323 - val_accuracy: 0.8113 - 833s/epoch - 406ms/step
+Epoch 6/10
+2048/2048 - 568s - loss: 0.2627 - accuracy: 0.8928 - val_loss: 0.4780 - val_accuracy: 0.8066 - 568s/epoch - 277ms/step
+Epoch 7/10
+2048/2048 - 550s - loss: 0.2574 - accuracy: 0.8955 - val_loss: 0.4454 - val_accuracy: 0.7938 - 550s/epoch - 269ms/step
+Epoch 8/10
+2048/2048 - 537s - loss: 0.2431 - accuracy: 0.9026 - val_loss: 0.4080 - val_accuracy: 0.8408 - 537s/epoch - 262ms/step
+Epoch 9/10
+2048/2048 - 528s - loss: 0.2423 - accuracy: 0.9026 - val_loss: 0.3913 - val_accuracy: 0.8353 - 528s/epoch - 258ms/step
+Epoch 10/10
+2048/2048 - 535s - loss: 0.2300 - accuracy: 0.9087 - val_loss: 0.3280 - val_accuracy: 0.8641 - 535s/epoch - 261ms/step
+Test set accuracy is 0.8614
+2021-12-02 00:42:31.194219: W tensorflow/python/util/util.cc:368] Sets are not currently considered sequences, but this may change in the future, so consider avoiding using them.
+Traceback (most recent call last):
+  File "random_rotate.py", line 88, in <module>
+    model.save("./patchcamelyon10epoch.hf5")
+  File "/ocean/projects/cis210064p/mezhao/cs153xsede/env/lib/python3.7/site-packages/keras/utils/traceback_utils.py", line 67, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/ocean/projects/cis210064p/mezhao/cs153xsede/env/lib/python3.7/site-packages/tensorflow/python/saved_model/function_serialization.py", line 68, in serialize_concrete_function
+    f"Failed to add concrete function '{concrete_function.name}' to object-"
+KeyError: "Failed to add concrete function 'b'__inference_model_layer_call_fn_97269'' to object-based SavedModel as it captures tensor <tf.Tensor: shape=(), dtype=resource, value=<Resource Tensor>> which is unsupported or not reachable from root. One reason could be that a stateful object or a variable that the function depends on is not assigned to an attribute of the serialized trackable object (see SaveTest.test_captures_unreachable_variable)."
